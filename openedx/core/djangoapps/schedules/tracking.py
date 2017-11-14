@@ -64,6 +64,7 @@ class GoogleAnalyticsTrackingPixel(object):
     campaign_source = attr.ib(default=DEFAULT_CAMPAIGN_SOURCE, metadata={'param_name': 'cs'})
     campaign_medium = attr.ib(default=DEFAULT_CAMPAIGN_MEDIUM, metadata={'param_name': 'cm'})
     campaign_name = attr.ib(default=None, metadata={'param_name': 'cn'})
+    campaign_content = attr.ib(default=None, metadata={'param_name': 'cc'})
 
     event_category = attr.ib(default='email', metadata={'param_name': 'ec'})
     event_action = attr.ib(default='edx.bi.email.opened', metadata={'param_name': 'ea'})

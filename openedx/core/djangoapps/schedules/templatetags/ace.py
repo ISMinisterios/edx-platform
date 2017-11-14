@@ -93,6 +93,9 @@ def _get_google_analytics_tracking_url(context):
     pixel = GoogleAnalyticsTrackingPixel(
         site=site,
         user_id=user.id,
+        campaign_source=message.app_label,
+        campaign_name=message.name,
+        campaign_content=message.uuid,
         document_path='/email/{0}/{1}/{2}/{3}'.format(
             message.app_label,
             message.name,

@@ -125,6 +125,9 @@ class TestGoogleAnalyticsPixelTag(QueryStringAssertionMixin, EmailTemplateTagMix
         self.assert_query_string_parameters_equal(
             result_url,
             uid=self.fake_request.user.id,
+            cs=self.message.app_label,
+            cn=self.message.name,
+            cc=self.message.uuid,
             dp='/email/test_app_label/test_name/{send_uuid}/{uuid}'.format(
                 send_uuid=self.message.send_uuid,
                 uuid=self.message.uuid,

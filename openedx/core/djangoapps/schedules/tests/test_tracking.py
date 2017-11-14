@@ -93,6 +93,7 @@ class TestGoogleAnalyticsTrackingPixel(QueryStringAssertionMixin, CacheIsolation
             campaign_source='test_cs',
             campaign_medium='test_cm',
             campaign_name='test_cn',
+            campaign_content='test_cc',
             event_category='test_ec',
             event_action='test_ea',
             event_label='test_el',
@@ -106,7 +107,7 @@ class TestGoogleAnalyticsTrackingPixel(QueryStringAssertionMixin, CacheIsolation
             netloc='www.google-analytics.com',
             path='/collect',
             query='tid=UA-123456-1&v=2&t=ev&cs=test_cs&cm=test_cm&cn=test_cn&ec=test_ec&ea=test_ea&el=test_el'
-                  '&dp=test_dp&cid=123456.123456'
+                  '&dp=test_dp&cid=123456.123456&cc=test_cc'
         )
 
     def test_missing_settings(self):
