@@ -25,5 +25,5 @@ official and easily shareable.
 Upgrade by {{ user_schedule_upgrade_deadline_time }}.
 {% endblocktrans %}
 
-{% trans "Upgrade now at" %} <{{ upsell_link }}>
+{% trans "Upgrade now at" %} <{% with_link_tracking upsell_link %}>
 {% endif %}
